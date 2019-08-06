@@ -1,0 +1,301 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	font-family: 'Kalam', cursive;
+	outline-style: none;
+	color: black;
+}
+body{
+
+	scroll-behavior: smooth;
+}
+
+.page{ 
+	width: 100%;
+	height: 100vh;	
+	trans
+}
+.one{
+		background-image: url("../images/backgroundOne.jpg");
+		background-size: cover;
+		box-shadow: inset 0px 0px 15px 1px black;
+}
+
+nav {
+	height: 150px;
+	width: 100%;
+	margin: 0 auto;
+
+}
+nav ul{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin:  auto;
+
+}
+
+nav li a {
+
+	font-size: 1.5rem;
+	margin:0 50px;	
+}
+.current{
+	color: darkred;
+	border-bottom: 2px solid black;
+}
+nav li .links{
+	border: 1px solid black;
+	padding: 0px 12px;
+	border-radius: 2px;
+	box-shadow:2px 2px black;
+		
+
+}
+
+
+
+nav li .links:hover{
+	color: darkred;
+	
+}
+.logo{
+	margin-top: 15px;
+	display: block;
+	height: 150px;
+	width:150px;
+	background-image: url('../images/logo.jpg');
+	background-size: cover;
+	background-position: center;
+	border-radius: 50%;
+	animation-name: logoMove;
+	animation-duration: 1.5s;
+
+
+}
+
+
+.main-wrapper{
+	
+	display: grid;
+	margin: auto;
+	margin-top: 10px;
+	height: 75vh;
+	width: 85%;
+	grid-template-areas: 
+		'image-container   side-bar'
+		;
+	grid-template-columns: 4fr 1fr;
+	grid-gap: 1rem;
+}
+.image-back{
+	position: absolute;
+	cursor: pointer;
+	height: 103vh;
+	width: 100%;
+	background: black;
+	z-index: 1;
+	display: none;
+	
+}
+
+.image-view{
+	box-shadow: 0 0 5px 1px white;
+	border: 20px solid black;
+	display: block;
+	margin:30px auto;
+	text-align: center;
+    height: 85%;
+
+
+}
+
+.image-container{
+	position: relative;
+	grid-area: image-container;
+	justify-content: center;
+	align-items:center;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-gap: 1rem; 
+	padding: 1rem;
+	grid-template-areas: 
+		'img-1 img-2 img-3'
+		'img-4 img-5 img-3'
+		'img-6 img-5 img-7';
+
+}
+.img{
+	border: 1px solid black;
+	background-position: center;
+	background-size: cover;
+	height: 100% ;
+	width: 100%;	
+	margin:0 auto;
+	box-shadow:  0px 0px 20px 3px black;
+	cursor: pointer;
+	animation-name: slowShow;
+	animation-duration: 2s;
+
+
+	
+
+
+}
+.img:hover{
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	
+}
+.img-1{
+	grid-area: img-1;
+	background-image:url('../images/rb/IMAG1.jpg'); 
+	
+}
+@keyframes slowShow{
+
+	0%{
+		display:none;
+		opacity: 0;
+	}
+	50%{
+		display:none;
+		opacity: 0.1;
+	}
+
+	100%{
+		opacity: 1;
+	}
+}
+@keyframes logoMove {
+	0%{
+		opacity: 0;
+		transform: translateY(110vh);
+	}
+	25%{
+		opacity: 0.1;
+
+	}
+	50%
+	{
+		opacity: 0.5;
+	}
+	100%
+	{
+		opacity: 1;	
+		transform:translateY(0px);	
+	}
+}
+.img-2{
+	grid-area: img-2;
+	background-image:url('../images/rb/IMAG2.jpg'); 
+}
+.img-3{
+	grid-area: img-3;
+	background-image:url('../images/rb/IMAG3.jpg'); 
+}
+.img-4{
+	grid-area: img-4;
+	background-image:url('../images/rb/IMAG4.jpg'); 
+}
+.img-5{
+	grid-area: img-5;
+	background-image:url('../images/rb/IMAG5.jpg'); 
+}
+.img-6{
+	grid-area: img-6;
+	background-image:url('../images/rb/IMAG6.jpg'); 
+}
+.img-7{
+	grid-area: img-7;
+	background-image:url('../images/rb/IMAG7.jpg'); 
+}
+.side-bar {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	grid-area: side-bar;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items:   center;
+	font-size: 1.7rem;
+	box-shadow: 1px 0px 5px black;
+	
+}
+.side-bar h3{
+	margin-bottom: 20px;
+
+	top: 40%;
+
+	
+
+}
+.side-bar a{
+
+color: darkred;
+
+}
+.footer{
+	position: absolute;
+    bottom: 0;
+    width: 100%;
+	margin-top: 1rem;
+	background-color: black
+}
+.footer h3{
+	text-align: center;
+	color: white;
+	font-size: 1rem;
+}
+.active{
+	
+	text-decoration: underline darkred;
+
+
+	color: black !important;
+	
+}
+
+.side-bar a:hover{
+
+	display: block;
+	color: darkred;
+
+	
+
+
+}
+
+
+/*-----------------------------*/
+
+
+
+
+@media only screen and (max-width: 1300px) {
+	nav {
+	height: 100px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+nav li a {
+	font-size: 1.3rem;
+	margin:0 30px;
+	
+}
+.logo{
+	margin-top: 20px;
+	height: 110px;
+	width:110px;
+
+}
+.side-bar {
+	padding: 1rem;
+	font-size: 1.5rem;
+	
+}
+
